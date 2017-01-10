@@ -1,0 +1,976 @@
+/*
+Theme Name: Green CityHub
+Description:  Greens' modifications to PizelGrade's CityHub theme.
+Template: cityhub
+*/
+
+@font-face {
+	font-family: 'AbcGreenRegular';
+	src: url('fonts/abcgreen/abczelenych-webfont.eot');
+	src: url('fonts/abcgreen/abczelenych-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/abcgreen/abczelenych-webfont.woff') format('woff'),
+		 url('fonts/abcgreen/abczelenych-webfont.ttf') format('truetype'),
+		 url('fonts/abcgreen/abczelenych-webfont.svg#AbcGreenRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AbcGreenBold';
+	src: url('fonts/abcgreen/abczelenychbold-webfont.eot');
+	src: url('fonts/abcgreen/abczelenychbold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/abcgreen/abczelenychbold-webfont.woff') format('woff'),
+		 url('fonts/abcgreen/abczelenychbold-webfont.ttf') format('truetype'),
+		 url('fonts/abcgreen/abczelenychbold-webfont.svg#AbcGreenBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AbcGreenBoldItalic';
+	src: url('fonts/abcgreen/abczelenychbolditalic-webfont.eot');
+	src: url('fonts/abcgreen/abczelenychbolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/abcgreen/abczelenychbolditalic-webfont.woff') format('woff'),
+		 url('fonts/abcgreen/abczelenychbolditalic-webfont.ttf') format('truetype'),
+		 url('fonts/abcgreen/abczelenychbolditalic-webfont.svg#AbcGreenBoldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AbcGreenItalic';
+	src: url('fonts/abcgreen/abczelenychitalic-webfont.eot');
+	src: url('fonts/abcgreen/abczelenychitalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/abcgreen/abczelenychitalic-webfont.woff') format('woff'),
+		 url('fonts/abcgreen/abczelenychitalic-webfont.ttf') format('truetype'),
+		 url('fonts/abcgreen/abczelenychitalic-webfont.svg#AbcGreenItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+hgroup, h1, h2, h3, h4, h5, h6, .progressbar-title {
+	font-family: "ABCGreenRegular", sans-serif;
+}
+.alpha, h1, .entry-title, .beta, h2, .gama, h3, .delta, h4, .epsylon, h5, .zeta, h6 {
+	font-weight: normal;
+}
+.entry-title, .article-title {
+	font-size: 36px;
+	font-size: 1.8rem;
+}
+.beta, h2 {
+	font-weight: bold;
+}
+
+.site-mainmenu a {
+	text-transform: none;
+}
+.sub-menu li a {
+	text-transform: none;
+}
+.site-logo,
+.site-mainmenu > li > a {
+	font-family: "Ubuntu Condensed", Helvetica, Arial, sans-serif;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.site-mainmenu > li.menu-parent-item > a {
+	padding-right: 16px;
+	padding-left: 12px;
+}
+.site-mainmenu > li.menu-parent-item > a:after {
+	width: 2px;
+	height: 2px;
+	right: 5px;
+	margin-top: -6px;
+}
+
+/* IE fix */
+.touch .site-mainmenu > li.menu-parent-item > a:after {
+	top: 50px;
+}
+.touch .site-mainmenu > li.menu-parent-item > a:hover:after {
+	top: 54px;
+}
+@media only screen and (max-width: 1733.33px) {
+	.touch .site-mainmenu > li.menu-parent-item > a:after {
+		top: 46px;
+	}
+	.touch .site-mainmenu > li.menu-parent-item > a:hover:after {
+		top: 50px;
+	}
+}
+@media only screen and (max-width: 1213.33px) {
+	.touch .site-mainmenu > li.menu-parent-item > a:after {
+		top: 41px;
+	}
+	.touch .site-mainmenu > li.menu-parent-item > a:hover:after {
+		top: 45px;
+	}
+}
+@media only screen and (max-width:1040px) {
+	.js-nav.csstransforms3d.csstransitions .site-navigation {
+	    -ms-transform: none;
+	    /*-moz-transform-origin: 70% 0;*/
+	}
+}
+
+.sub-menu li:first-child a {
+	padding-top: 0.9rem;
+}
+.sub-menu li:last-child a {
+	padding-bottom: 0.9rem;
+}
+.sub-menu li a {
+	font-family: "Ubuntu Condensed", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	padding: 0.55rem 1rem;
+	width: 230px;
+	width: 11.5rem;
+}
+nav li.to-the-left > ul > li > a {
+	width: 180px;
+	width: 8rem;
+}
+
+.filter-by_list-item.experti {
+	background-color: rgb(255, 221,0);
+}
+.filter-by_list-item.obcansky-zajem {
+	background-color: rgb(232, 78, 27);
+}
+.filter-by_list-item.socialni-prace {
+	background-color: rgb(29, 12, 183);
+}
+.filter-by_list-item.zivotni-prostredi {
+	background-color: rgb(149, 27, 129);
+}
+
+/* Bootstrap well. */
+.well {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.well blockquote {
+	border-color: #ddd;
+	border-color: rgba(0, 0, 0, 0.15);
+}
+.well-lg {
+	padding: 24px;
+	border-radius: 6px;
+}
+.well-sm {
+	padding: 9px;
+	border-radius: 3px;
+}
+
+
+/* Stitky */
+.temata li {
+	display: block;
+	position: relative;
+	line-height: 28px;
+	color: #fff;
+	padding: 8px 0 8px 30px;
+	margin: 3px 0;
+	font-style: italic;
+	white-space: nowrap;
+}
+.temata li:before,
+.temata li:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+.temata li:before {
+	top: 0;
+	left: -16px;
+	border: solid transparent;
+	border-width: 0 0 44px 16px;
+}
+.temata li:after {
+	top: 0;
+	right: -44px;
+	border: 22px solid transparent;
+}
+.yell {
+	background-color: rgb(255, 221,0);
+}
+li.yell:before {
+	border-bottom-color: rgb(255, 221, 0);
+}
+li.yell:after {
+	border-left-color: rgb(255, 221, 0);
+}
+.orange {
+	background-color: rgb(232, 78, 27);
+}
+li.orange:before {
+	border-bottom-color: rgb(232, 78, 27);
+}
+li.orange:after {
+	border-left-color: rgb(232, 78, 27);
+}
+.blue {
+	background-color: rgb(29, 12, 183);
+}
+li.blue:before {
+	border-bottom-color: rgb(29, 12, 183);
+}
+li.blue:after {
+	border-left-color: rgb(29, 12, 183);
+}
+.purp {
+	background-color: rgb(149, 27, 129);
+}
+li.purp:before {
+	border-bottom-color: rgb(149, 27, 129);
+}
+li.purp:after {
+	border-left-color: rgb(149, 27, 129)
+}
+
+
+/* Blockquote generovany ze shortcodes. */
+.pre-article-box, .entry-content blockquote {
+	padding: 20px 20px 20px 68px;
+	padding: 1rem 1rem 1rem 3.4rem;
+	background-color: #f2f2f2;
+	font-weight: normal;
+	color: #000;
+}
+.entry-content blockquote p {
+	font-size: 24px;
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+.shc.testimonial .author_name {
+	font-size: 20px;
+	font-size: 1rem;
+	line-height: 1em;
+	font-weight: bold;
+	color: #000;
+	font-variant: small-caps;
+}
+
+/* 3x proc list */
+.why-me {
+	list-style: none;
+	margin-left: -72px;
+	margin-left: -3.6rem;
+	font-size: 24px;
+	font-size: 1.2rem;
+}
+.why-me li {
+	display: block;
+	background-color: #f2f2f2;
+	border-left: 4px solid #349f36; /* nahrazeno #179e1e */
+	padding: 10px 10px 10px 68px;
+	padding: 0.5rem 0.5rem 0.5rem 3.4rem;
+	text-indent: -8px;
+	text-indent: -0.4rem;
+	margin-bottom: 10px;
+	margin-bottom: 0.5rem;
+}
+.why-me li::first-letter {
+	float: left;
+}
+
+/* V paticce normalni nadpisy clanku, */
+.latest-posts-title {
+  text-transform: none;
+}
+
+/* Kurziva barvou textu. */
+.entry-content em {
+  color: #3d3d3d;
+}
+
+/* Vetsi line-height v textu zahlavi. */
+.page-header p {
+	line-height: 1.5;
+}
+
+/* Nadpisy v sidebaru zelene. */
+.side-content .widget-title {
+	color: #349f36; /* nahrazeno #179e1e */
+}
+
+/* Docasne skryti TAGS */
+.article-meta {
+	display: none;
+}
+
+/* Nadpis pod navigaci projektu. */
+@media only screen and (min-width: 1041px) {
+	.project-title {
+		padding-right: 150px;
+		padding-right: 7.5rem;
+	}
+}
+@media only screen and (max-width: 1040px) {
+	.row .span6 { width: 50%; float: left; }
+	body {
+		background: #fff !important;
+	}
+	.wrapper-header-small {
+		background-color: rgba(0,0,0,0.5);
+	}
+}
+@media only screen and (max-width: 980px) {
+	.row .span6 { width: 100%; float: none; }
+}
+
+/* Trocha typografie. */
+.entry-content h2 {
+	margin-bottom: 16px;
+	margin-bottom: 0.8rem;
+	font-weight: normal;
+}
+
+/* CTA */
+.call-to-action-wrapper {
+	padding: 20px 0;
+	padding: 1rem 0;
+}
+.call-to-action-wrapper .span5 {
+	margin-bottom: 20px;
+	margin-bottom: 1rem;
+}
+.call-to-action-wrapper a img {
+  -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
+          transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+.call-to-action-wrapper a:hover img {
+	-webkit-transform: scale(1.1);  /* Chrome, Safari 3.1+ */
+	-moz-transform: scale(1.1);  /* Firefox 3.5+ */
+	-ms-transform: scale(1.1);  /* IE 9 */
+	-o-transform: scale(1.1);  /* Opera 10.50-12.00 */
+	transform: scale(1.1);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.cta {
+	padding: 20px 0;
+	padding: 1rem 0;
+}
+.cta a {
+	display: block;
+	float: left;
+	width: 48%;
+	padding: 2%;
+}
+.cta a img {
+	float: left;
+	-webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+	   -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+	     -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
+	        transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+.cta a.first img {
+	float: right;
+}
+.cta a:hover img {
+	-webkit-transform: scale(1.1);  /* Chrome, Safari 3.1+ */
+	-moz-transform: scale(1.1);  /* Firefox 3.5+ */
+	-ms-transform: scale(1.1);  /* IE 9 */
+	-o-transform: scale(1.1);  /* Opera 10.50-12.00 */
+	transform: scale(1.1);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+/*
+================================
+=PODPORUJI NAS
+================================ */
+.supporting-people-item {
+	float: left;
+	width: 30%;
+	margin-right: 5%;
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 20px;
+	overflow: hidden;
+}
+.entry-content > .supporting-people-item:nth-child(3n+3) {
+	margin-right: 0;
+}
+.entry-content > .supporting-people-item:nth-child(3n+4) {
+	clear: left;
+}
+/* RWD */
+@media (max-width: 1100px) and (min-width: 641px) {
+	.supporting-people-item {
+	}
+	.supporting-people-item.is-taller {
+	}
+}
+@media (max-width: 640px) {
+	.supporting-people-item,
+	.supporting-people-item.is-taller {
+		float: none;
+		height: auto;
+		width: auto;
+		margin-right: none;
+	}
+}
+/* Obrazek */
+.supporting-people-item .image {
+	display: block;
+	text-align: center;
+}
+.supporting-people-item .image img {
+	display: block;
+	margin: 0 auto;
+	width: auto;
+	max-height: 100px;
+}
+/* Jmeno */
+.supporting-people-item .name {
+	margin-top: 27px;
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+
+/*
+================================
+=NARROW CONTENT
+================================ */
+.narrower-content {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.narrower-content p {
+	padding-left: 27px;
+	padding-left: 1.5rem;
+}
+.narrower-content ul,
+.narrower-content ol {
+	padding-left: 54px;
+	padding-left: 3rem;
+}
+@media (max-width: 768px) {
+	.narrower-content {
+		width: 100%;
+	}
+}
+@media (max-width: 480px) {
+	.narrower-content p,
+	.narrower-content ul,
+	.narrower-content ol {
+		padding-left: 0 !important;
+	}
+}
+
+/*
+================================
+=FRONT PAGE
+================================ */
+@media only screen and (min-width: 1041px) {
+	.home {
+		padding-top: 108px;
+		padding-top: 6rem;
+	}
+	.volby, .home.volby {
+		padding-top: 100px;
+		padding-top: 4.6rem;
+	}
+}
+.home .wrapper-header, .volby .wrapper-header {
+	background-color: #349f36; /* nahrazeno rgb(23, 158, 30) */
+}
+.fp-news {
+	overflow: visible;
+	margin-bottom: 36px;
+	margin-bottom: 2rem;
+}
+.fp-news article {
+	padding: 1.5rem 0 0;
+	border-bottom: none;
+	margin-bottom: 0;
+}
+.fp-news .entry-header,
+.ep-news .entry-header {
+	padding-left: 0;
+	margin-left: 0;
+	border-left: 0;
+}
+.fp-news .entry-header .entry-thumbnail {
+	text-align: center;
+}
+.fp-news .entry-header .entry-date {
+	line-height: 2em;
+}
+.fp-news .entry-title {
+	line-height: 1.25208;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: none;
+	text-align: left;
+	margin-bottom: 0.4rem;
+}
+.fp-news .entry-title a {
+	color: rgb(23, 158, 30);
+}
+.fp-news .entry-summary {
+	font-size: 16px;
+}
+.fp-news .span4:nth-child(4) {
+	clear: both;
+}
+
+.ep-news article {
+	padding-bottom: 0;
+	margin-bottom: 18px;
+	border-bottom: none;
+}
+.ep-news article h3 {
+	text-transform: none;
+	font-size: 24px;
+}
+.ep-news article h3 a {
+	color: #349f36; /* nahrazeno #179e1e */
+}
+.ep-news .entry-summary {
+	font-size: 18px;
+}
+.ep-news .entry-summary p:nth-child(1n+2) {
+	display: none;
+}
+.ep-news .btn {
+	display: none;
+}
+.ep-news.sticky time {
+	display: none;
+}
+.ep-news.sticky h3 {
+	padding: 0.5rem 0;
+}
+
+.last-home .row > div {
+	margin-bottom: 1rem;
+}
+.last-home .entry-title {
+	text-align: left;
+}
+
+
+/*
+================================
+=EVENTS CALENDAR OVERRIDE
+================================ */
+#tribe-events-pg-template {
+	width: 1280px;
+	width: 64rem;
+	max-width: 94%;
+}
+.events-list .tribe-events-loop {
+	max-width: 100%;
+}
+.tribe-events-list .vevent.hentry {
+	padding-top: 18px;
+	padding-top: 1rem;
+	padding-bottom: 18px;
+	padding-bottom: 1rem;
+}
+.tribe-events-list .time-details,
+.tribe-events-list .tribe-events-venue-details {
+	font-size: 18px;
+	font-size: 1rem;
+}
+.tribe-events-list .time-details {
+	float: left;
+	margin-right: 18px;
+	margin-right: 1rem;
+}
+.tribe-events-list .tribe-events-venue-details {
+}
+#tribe-events-pg-template .tribe-events-list-event-description p {
+	display: none;
+}
+.tribe-events-read-more {
+	display: none;
+}
+
+/* Kandidatka pro EP */
+.page-id-5474 .team-member-description {
+	font-size: 14px;
+}
+.page-id-5474 .team-member-description p {
+	padding: 0;
+}
+
+.btn-promo {
+	display: block;
+	text-align: center;
+	text-transform: none;
+	font-size: 32px;
+}
+
+.ep-promo .btn {
+	float: left;
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 48%;
+	text-align: center;
+	margin-top: 4%;
+}
+.ep-promo .btn:first-child {
+	margin-right: 4%;
+}
+
+.home #newsletter_form .email, .volby #newsletter_form .email {
+	border: 1px solid #ccc;
+	font-family: "ABCGreenRegular", sans-serif;
+}
+.home #newsletter_form .submit, .volby #newsletter_form .submit {
+	font-family: "ABCGreenItalic", sans-serif;
+	font-weight: bold;
+}
+
+/* Buttony, obecne barevne */
+.btn {
+	font-family: "ABCGreenRegular", sans-serif;
+}
+.home .btn, .volby .btn {
+	font-family: "ABCGreenItalic", sans-serif;
+	letter-spacing: normal;
+}
+.btn-yellow {
+	background-color: rgb(231,200,74);
+}
+.btn-orange {
+	background-color: rgb(234,91,43);
+}
+.btn-blue {
+	background-color: rgb(30,117,187);
+}
+.btn-violet {
+	background-color: rgb(140,47,136);
+}
+.btn-yellow:hover,
+.btn-orange:hover,
+.btn-blue:hover,
+.btn-violet:hover {
+	background-color: rgb(49,156,49);
+}
+
+/* PROGRAM */
+.program .program-toc {
+	font-family: "ABCGreenItalic", Ubuntu, sans-serif;
+}
+.program .program-content {
+	list-style: none;
+}
+.program .program-content h3 {
+	font-family: "ABCGreenItalic", Ubuntu, sans-serif;
+	margin: 2rem 0 1rem;
+	position: relative;
+	left: -1.2em;
+	color: rgb(49,156,49);
+	font-weight: bold;
+	text-transform: none;
+}
+.program .program-content h4 {
+	font-weight: bold;
+	text-transform: none;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	font-size: 1rem;
+	color: #222;
+}
+.program .program-content p {
+	text-indent: 3em;
+	font-family: "ABCGreenRegular", Ubuntu, sans-serif;
+	margin-bottom: 0;
+}
+
+/* Styl pro Ukrajinu */
+.letter-from-ukraine {
+	font-family: sans-serif;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.letter-from-ukraine span.ukraine-small {
+	font-size: 16px;
+	color: #999;
+}
+
+.letter-from-ukraine h3 {
+	margin: 1.5em 0 0.75em;
+}
+
+.letter-from-ukraine img {
+	margin-bottom: 1.5em;
+}
+/* very nasty hack */
+#post-6197 h1 {
+	text-transform: none;
+	border-left: 0;
+	max-width: 960px;
+	margin: 1em auto 0.1em;
+	padding-left: 0;
+}
+
+.ukraine-photostory {
+	text-align: center;
+	color: #999;
+}
+
+.ukraine-photostory p {
+	font-size: 0.8em;
+	margin: 2.5em 10%;
+}
+
+.podporte-ondreje {
+	max-width: 400px;
+	text-align: center;
+	margin: 5em auto;
+}
+.podporte-ondreje a {
+	text-decoration: underline;
+}
+
+.thankyoupage {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	background: transparent url(http://www.zeleni.cz/wp-content/themes/cityhub-zeleni/images/zeleny-hlas.png) 0 0 no-repeat;
+	background-size: contain;
+	min-height: 548px;
+}
+.thankyoupage h2 {
+	color: #fff;
+	text-align: center;
+}
+
+iframe[name=google_conversion_frame] {
+    display: none;
+}
+body>iframe {
+	position: absolute;
+}
+
+.admin-bar .wrapper-header-big {
+	top: 32px;
+}
+
+.entry-content iframe[align=right] {
+	margin: 20px 0 20px 20px;
+}
+
+.hupso_facebook {
+	line-height: 25px;
+}
+
+table thead,table tbody,table tfoot {
+	border: 1px solid #f2f2f2;
+	background-color: #fff;
+}
+
+table caption {
+	font-weight: 700;
+	padding: .9rem .925rem .925rem;
+}
+
+table thead,table tfoot {
+	background: #f9f9f9;
+	color: #414042;
+}
+
+table thead tr,table tfoot tr {
+	background: transparent;
+}
+
+table thead th,table thead td,table tfoot th,table tfoot td {
+	padding: .9rem .925rem .925rem;
+	font-weight: 700;
+	text-align: left;
+}
+
+table tbody tr, .entry-content table tbody tr:nth-of-type(2n+1) {
+	background-color: #f3f9ef;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #edf6e8;
+}
+
+table tbody tr:hover, .entry-content table tbody tr:nth-of-type(2n+1):hover { background: #def0d4; }
+
+.entry-content table { margin-top: 1rem; }
+
+.entry-content table tbody th, .entry-content table tbody td, table tbody th, table tbody td {
+	padding: .9rem .925rem 0 .925rem;
+}
+
+table td > h2, table td > h3 { margin: 0.5rem 0; color: #349f36; }
+table td > strong:first-child { padding-top: 0.5rem; }
+table td > h3, table td > strong:first-child, table td > strong:first-child strong { font-family: 'AbcGreenBoldItalic'; font-weight: normal }
+table td > strong:first-child+p { display: inline; }
+table img.alignright { margin-left: 35px; }
+
+.wrapper-featured-image.no-image { min-height: 0; }
+
+.is_touch_device .portfolio-item-info  .portfolio-item-table { background: #fff; padding-top: 13px; }
+
+/*
+================================
+=VOLBY 2016
+================================ */
+
+.wrapper-header-small .site-branding img { max-height: 50px; }
+
+.volby .wrapper-header { padding-left: 22px; }
+.head-kraj-senat { padding: 11px 30px; background: #def0d4; font-family: 'AbcGreenBoldItalic'; }
+.head-kraj-senat .row { display: table; width: 100%; position: relative; margin: 0 auto; }
+.head-kraj-senat .span6 { display: table-cell; vertical-align: middle; width: 50%; border-left: 0; }
+.head-kraj-senat .span6 > a { }
+.head-kraj-senat .span6:first-child { padding-right: 50px; }
+.head-kraj-senat a:hover img { opacity: 0.9; }
+.head-kraj-senat a:hover h2, .head-kraj-senat ul li a:hover { text-decoration: underline; }
+.head-kraj-senat h2 { margin: 0 0 4px 0; text-transform: none; color: #349f36; font-family: inherit; line-height: 1.1; }
+.head-kraj-senat span.pull-right { width: 215px; margin: 0 0 0 20px; display: table; table-layout: fixed; }
+.head-kraj-senat .tc { height: 135px; display: table-cell; vertical-align: middle; }
+.head-kraj-senat .span6.tc > .tc { width: 50%; }
+.head-kraj-senat img { height: auto; vertical-align: middle; transition: opacity 0.25s; }
+.head-kraj-senat ul { margin: 0; padding: 0; color: #000; }
+.head-kraj-senat ul li { list-style-type: none; padding-left: 15px; line-height: 1.15; margin-bottom: 5px; }
+.head-kraj-senat ul li a { color: inherit; }
+.head-kraj-senat ul li:before { content: "> "; margin-left: -15px; }
+
+.volby .kraj { padding: 20px 0; }
+.volby .kraj .featuredworks-title { margin-left: -10px; padding-left: 20px; }
+.volby .kraj h3.green-bg { max-width: 550px; margin-top: 0; padding: 10px; font-size: 26px; font-family: 'AbcGreenBoldItalic'; text-transform: none; }
+.green-bg { background: #349f36; color: #fff; }
+.text-center { text-align: center; }
+.volby .kraj .priority p { margin-top: 15px; font-size: 18px; font-family: 'AbcGreenBold'; color: #000; }
+.volby .kraj .priority.span3 { border-left-width: 13px; margin-bottom: 10px; }
+.volby .kraj div.legend+row { margin-left: 48px; }
+.volby .kraj .priority > a > div, .volby .kraj .priority > a > h3, .volby .kraj .priority > a > p, .volby .kraj .link-icon { width: 550px; max-width: 100%; }
+.volby .kraj .priority > a { transition: opacity 0.25s; }
+.volby .kraj .priority > a:hover { opacity: 0.85; }
+.volby .kraj .icon-light { max-width: 105px; float: left; margin-right: 20px;  }
+.volby .kraj hr { margin-bottom: 20px; }
+.volby .kraj ul+hr { margin-top: 80px; margin-bottom: 0; }
+.volby .kraj .link-icon h4 { text-transform: none; line-height: 80px; font-size: 26px; display: block; }
+
+.volby .kraj h1 { font-family: 'AbcGreenBoldItalic'; text-transform: none; color: #349f36; margin-bottom: 13px; }
+.volby .kraj .legend { display: inline-block; padding: 0 15px; background: #fff; margin: 0 0 0 20px; text-transform: uppercase; font-size: 14px; position: relative; top: -21px; }
+.volby .kraj .span3 h4 { color: #349f36; text-transform: none; font-size: 18px; line-height: 1.2; font-family: 'AbcGreenBoldItalic'; margin-bottom: 6px; word-spacing: -1px; }
+.volby .kraj hr { clear: both; }
+.volby .kraj img.pull-right { margin: 0 0 40px 20px; }
+.volby .kraj ul li { margin-bottom: 10px; }
+
+@media only screen and (max-width: 1420px) {
+	.volby .kraj .link-icon h4 { padding: 0 25px; }
+	.volby .kraj .featuredworks-title { margin-left: -4px; border-left-color: #349f36; line-height: 1.2; }
+	.volby .kraj { padding: 30px; }
+}
+@media only screen and (max-width: 1250px) {
+	.volby .kraj h3.green-bg, .volby .kraj .link-icon h4 { font-size: 21px; }
+}
+@media only screen and (max-width: 1145px) {
+	.head-kraj-senat span.pull-right { width: 160px; }
+	.head-kraj-senat .tc { height: 100px; }
+}
+@media only screen and (min-width: 1041px) {
+	.volby .kraj div.legend + .row { margin-left: -13px; }
+}
+@media only screen and (max-width: 1040px) {
+	.volby .kraj .featuredworks-title { border-left: 4px solid #349f36; }
+	.head-kraj-senat h2 { font-size: 25px; }
+	.head-kraj-senat li { font-size: 17px; }
+	.head-kraj-senat span.pull-right { width: 108px; }
+}
+@media only screen and (max-width: 870px) {
+	.head-kraj-senat span.pull-right { display: none; }
+	.volby .wrapper-header { padding-left: 0; }
+	.volby .kraj .featuredworks-title { text-align: left; }
+	table img.alignright { float: none; }
+}
+@media only screen and (max-width: 615px) {
+	.head-kraj-senat { padding: 11px 20px; }
+	.head-kraj-senat h2 { font-size: 21px; }
+	.head-kraj-senat li { font-size: 15px; }
+	.head-kraj-senat .span6:first-child { padding-right: 10px; }
+}
+@media only screen and (max-width: 520px) {
+	.head-kraj-senat .tc { height: auto; }
+	.head-kraj-senat .span6 { display: block; width: 100%; vertical-align: top; padding: 10px 0; }
+	.volby .kraj .link-icon h4 { line-height: 1.3; }
+
+	.head-kraj-senat span.pull-right { display: block; }
+}
+@media only screen and (max-width: 412px) {
+	.head-kraj-senat span.pull-right { display: none; }
+}
+
+/*
+================================
+=Header banners 2016
+================================ */
+
+.head-kraj-senat.calls { background: transparent; margin: 40px 0; padding-top: 0; padding-bottom: 0; }
+#header + .svg-defs + .head-kraj-senat.calls { margin-bottom: 5px; }
+	.head-kraj-senat.calls .span6 { width: 49%; height: 94px; overflow: hidden; }
+	.call-left { background: #257728; color: #fff; margin-right: 1%; }
+	.call-right { background: #ddefde; color: #349f36; margin-left: 1%; }
+		.head-kraj-senat.calls h2 { color: inherit; font-family: 'AbcGreenBoldItalic'; font-style: normal; font-weight: normal; font-size: 29px; width: 200px; padding: 16px 0 16px 23px; overflow: hidden; position: absolute; left: 80px; }
+		.head-kraj-senat.calls .call-right h2 { left: 100px; }
+		.head-kraj-senat.calls span.pull-right { width: 409px; margin: 0; position: absolute; right: 0; top: 0; }
+			.head-kraj-senat.calls .pull-right .img { width: 409px; height: 94px; position: relative; right: 0; z-index: 2; -webkit-transition: right 0.4s; transition: right 0.4s; }
+				.head-kraj-senat.calls .pull-right image { -moz-clip-path: url(#myClip); -ms-clip-path: url(#myClip); -webkit-clip-path: url(#myClip); clip-path: url(#myClip);  }
+			.head-kraj-senat.calls a:hover h2 { text-decoration: none; }
+				.head-kraj-senat.calls a:hover .img { right: -100%; }
+			.head-kraj-senat.calls span.pull-left { display: block; padding: 12px 12px 12px 15px; }
+				.head-kraj-senat.calls span.pull-left img { vertical-align: middle; }
+			.head-kraj-senat.calls .arrow, .head-kraj-senat.calls .arrow:after { content: ""; position: absolute; top: 17px; right: 25px; z-index: 1; display: block; width: 0; height: 0; border-style: solid; border-width: 30px 0 30px 34px; border-color: transparent transparent transparent #66c069; }
+			.head-kraj-senat.calls .arrow { opacity: 0; transition: opacity 1s; }
+			.head-kraj-senat.calls a:hover .arrow { opacity: 1; -webkit-transition: opacity 0.3s; -webkit-transition-delay: 0.25s; transition: opacity 0.3s; transition-delay: 0.25s; }
+			.head-kraj-senat.calls .arrow:after { border-left-color: #257728; top: -26px; right: 2px; border-width: 26px 0 26px 30px; }
+			.head-kraj-senat.calls .call-right .arrow:after { border-left-color: #ddefde; }
+			.svg-defs { position: absolute; width: 0; height: 0; }
+
+@media only screen and (max-width: 1420px) {
+	.head-kraj-senat.calls .pull-right .img { right: -50px; }
+}
+
+@media only screen and (max-width: 1279px) {
+	.head-kraj-senat.calls .pull-right .img { right: -100px; }
+}
+
+@media only screen and (max-width: 1179px) {
+	.head-kraj-senat.calls .pull-right .img { right: -150px; }
+}
+
+@media only screen and (max-width: 1079px) {
+	.head-kraj-senat.calls .pull-right .img { right: -200px; }
+}
+
+@media only screen and (max-width: 980px) {
+	.head-kraj-senat.calls .pull-right .img { display: none; }
+}
+
+@media only screen and (max-width: 600px) {
+	.call-left, .call-right { margin: 0; }
+	.head-kraj-senat.calls h2 { font-size: 20px; left: 55px; }
+	.head-kraj-senat.calls .call-right h2 { left: 70px; }
+	.head-kraj-senat.calls span.pull-left img { height: 48px; }
+}
+
+@media only screen and (max-width: 520px) {
+	.head-kraj-senat.calls .span6 { display: table-cell; }
+}
+
+@media only screen and (max-width: 450px) {
+	.head-kraj-senat.calls span.pull-left { display: none; }
+	.head-kraj-senat.calls h2, .head-kraj-senat.calls .call-right h2 { left: 0; }
+}

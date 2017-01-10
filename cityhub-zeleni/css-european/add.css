@@ -1,0 +1,197 @@
+.telephone h2 {
+	font-size: 75px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: #555555;
+}
+
+.telephone {
+	border: 3px solid #179e1e;
+	outline: 3px solid #179e1e;
+    outline-offset: -9px;
+	min-height: 320px;
+	display: block;
+	margin-top: 100px;
+}
+
+.pin {
+	position: absolute;
+	left: 50%;
+	margin-top: -80px;
+	margin-left: -40px;
+}
+
+.ikony {
+	width: 100px;
+	padding-right: 20px;
+}
+
+.ikony:last-of-type {
+	padding-right: 0;
+}
+
+.goal .ikony {
+	width: 70px;
+}
+
+.goal .txt p {
+	height: 100px;
+}
+
+.goals a {
+	text-decoration: none;
+	border: 0;
+}
+
+@media (max-width: 800px) {
+	.ikony {
+		width: 70px;
+	}
+}
+
+.claim {
+	text-align: center;
+	padding: 30px;
+	border: 10px solid #bbe5f1;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.claim p {
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+.claim p:nth-of-type(2) {
+	font-weight: bold;
+	font-size: 24px;
+	color: #179e1e;
+	margin-bottom: 15px;
+}
+
+.claim p:nth-of-type(3) {
+	font-weight: bold;
+	font-size: 24px;
+	color: #179e1e;
+	margin-bottom: 0;
+}
+
+.claim2 {
+	text-align: center;
+	padding: 30px;
+	border: 10px solid #bbe5f1;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.claim2 p {
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+.claim2 p:nth-of-type(2) {
+	font-weight: bold;
+	font-size: 24px;
+	color: #179e1e;
+	margin-bottom: 15px;
+}
+
+.claim2 p:last-of-type {
+	font-size: .75em;
+	margin-bottom: 0;
+	font-weight: normal;
+}
+
+.goals {
+	display: table;
+	border: none;
+	border-collapse: collapse;
+}
+
+.txt .goal-title {
+	font-size: 25px;
+}
+
+.row {
+	display: table-row;
+}
+
+.goal {
+	display: table-cell;
+	height: 300px;
+	border: 5px solid #179e1e;
+	background-color: #FFFFFF;
+
+	transition: all 0.5s;
+}
+
+.goal:hover {
+	background-color: #bbe5f1;
+}
+
+.goal .txt {
+	position: relative;
+}
+
+.goal .txt a {
+	cursor: pointer;
+}
+
+.foot-claim {
+	font-size: 50px;
+	color: #FFFFFF;
+}
+
+.mapa {
+	text-align: center;
+}
+
+.mapa img {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+@media (max-width: 1285px) {
+	.mapa img {
+	  margin: 0 auto;
+	  width: 90%;
+	}
+}
+
+.prispet {
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #179e1e;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border: 3px solid #179e1e;
+	color: #FFFFFF;
+
+	transition: 0.5s all;
+}
+
+.prispet:hover {
+	background-color: #FFFFFF;
+	color: #179e1e;
+	transform: scale(1.1,1.1);
+}
+
+.prispet-link {
+	text-decoration: none;
+}
+
+.prispet p {
+	font-weight: bold;
+	font-size: 24px;
+}
